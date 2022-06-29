@@ -1,0 +1,24 @@
+programa
+{
+//crie um algoritmo que permite gerar os 5 número entre 1 e 50 sorteiados em umjogo da loteria (loto), armazenando-os em um vetor.
+//No final, exibir na tela os cinco números sorteados.
+
+	inclua biblioteca Util --> u
+	inteiro sorteio[5]
+	real num
+	inteiro i
+  
+	funcao inicio()
+	{
+	
+
+		inteiro i = 1; i <= sorteios; i++
+		
+	i = u.sorteia(inteiro 1,inteiro 50)
+			
+			escreva("\nSorteio nº ", i, ": ", valor_sorteado)
+		}
+
+		escreva("\n")
+	}
+}
