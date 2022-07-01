@@ -1,0 +1,55 @@
+programa
+{//2. Cadastrar 10 números de matrículas de alunos e armazená-los em um vetor. Esses números são distintos, ou seja,
+//não podem existir números de matrículas iguais, e deve estar no intervalo de 100 a 200.
+//Mostrar na tela as matrículas armazenadas, em ordem crescente.
+	
+	funcao inicio()
+	{
+	inteiro Alunos[10]
+	inteiro matricula, pos, cont, copia
+	caracter controle = 's'
+	inteiro troca = 0
+
+	para(pos = 0; pos < 10; pos++){
+		enquanto(verdadeiro){
+		escreva("Digite a matrícula: ")
+		leia(matricula)
+			
+//verificar se matrícula já existe
+		para(cont = 0; cont < 10; cont++){
+			se(matricula == Alunos[cont]){
+				escreva("Valor já existe! Digite outro! \n")
+				controle = 'n'
+			}
+		}
+//Verificar se número no intervalo válido
+		se ((matricula < 100) ou (matricula > 200)){
+			escreva("Valor inválido! \n ")
+			controle = 'n'
+		}
+// Se matrícula válida, efetivá-la
+		se(controle != 'n'){
+			Alunos[pos] = matricula
+			pare
+		}
+//Libera o cadastro de dados no vetor
+		controle = 's'
+	}
+	}
+//Ordenar valores  e exibir na tela
+	para(pos = 0; pos < 10; pos++){
+	para(cont = pos + 1; cont < 10; cont++){
+		se(Alunos[pos] > Alunos[cont]){
+		copia = Alunos[cont]
+		Alunos[cont] = Alunos[pos]
+		Alunos[pos] = copia
+		
+		}
+	}
+	
+	}
+	para(pos = 0; pos < 10; pos++){
+		escreva(Alunos[pos]+ " ")
+	}
+}
+}
