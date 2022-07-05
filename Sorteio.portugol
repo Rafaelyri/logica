@@ -11,14 +11,13 @@ programa
 	funcao inicio()
 	{
 	
-
-		inteiro i = 1; i <= sorteios; i++
+	inteiro i = 1; i <= sorteios; i++
 		
 	i = u.sorteia(inteiro 1,inteiro 50)
 			
-			escreva("\nSorteio nº ", i, ": ", valor_sorteado)
+	escreva("\nSorteio nº ", i, ": ", valor_sorteado)
 		}
 
-		escreva("\n")
+	escreva("\n")
 	}
 }
