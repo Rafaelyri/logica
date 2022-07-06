@@ -34,3 +34,11 @@ programa
 	}
 	
 	}	
+
+*********************************************************
+Pesquisa Binária em Vetores
+° um item é procurado em uma lista ordenada de forma muito eficiente.
+° divide ao meio a parte de lista q pode conter o item (espaço de busca), comparando o elemento procurando com o elemento no meio da lista...
+
+*pequisa de algoritmo -> log Base 2 Calculator
+log² (x)
