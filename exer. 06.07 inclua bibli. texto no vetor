@@ -1,10 +1,12 @@
 programa
 {
+	inclua biblioteca Texto
+ --> t
 //exer. 06/07= armasenando no vetor
 	
 	funcao inicio()
 	{
-	cadeia frutas[] = {"Morango", "Banana", "Cajú", "Amora"}, fruta 
+	cadeia frutas[] = {"morango", "banana", "cajú", "amora"}, fruta 
 	inteiro pos
 	
 	//para(inteiro i = 0; i < 4; i++){
@@ -13,6 +15,7 @@ programa
 	//}
 	escreva("Digite o nome de uma fruta: ")
 	leia(fruta)
+	fruta = t.caixa_baixa(fruta)
 	pos = 0
 	
 	
