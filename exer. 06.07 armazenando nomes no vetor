@@ -1,0 +1,30 @@
+programa
+{
+//exer. 06/07= armasenando no vetor
+	
+	funcao inicio()
+	{
+	cadeia frutas[] = {"Morango", "Banana", "Cajú", "Amora"}, fruta 
+	inteiro pos
+	
+	//para(inteiro i = 0; i < 4; i++){
+		//escreva("Digite uma fruta: ")
+		//leia(frutas[i])
+	//}
+	escreva("Digite o nome de uma fruta: ")
+	leia(fruta)
+	pos = 0
+	
+	
+	enquanto((pos < 3) e (frutas[pos] != fruta)){
+		pos = pos + 1
+	}
+	se(frutas[pos] == fruta){
+		escreva("Fruta Disponível. ")
+		
+	}
+	senao{
+		escreva("Fruta Indisponível! ")
+	}
+	
+	}	
