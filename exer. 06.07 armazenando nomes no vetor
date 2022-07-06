@@ -26,5 +26,6 @@ programa
 	senao{
 		escreva("Fruta Indisponível! ")
 	}
+	}
 	
 	}	
