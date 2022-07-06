@@ -1,7 +1,6 @@
 programa
 {
-	inclua biblioteca Texto
- --> t
+	inclua biblioteca Texto --> t
 //exer. 06/07= armasenando no vetor
 	
 	funcao inicio()
@@ -13,6 +12,9 @@ programa
 		//escreva("Digite uma fruta: ")
 		//leia(frutas[i])
 	//}
+	
+	//pesquisar no vetor
+	
 	escreva("Digite o nome de uma fruta: ")
 	leia(fruta)
 	fruta = t.caixa_baixa(fruta)
