@@ -42,3 +42,63 @@ Pesquisa Binária em Vetores
 
 *pequisa de algoritmo -> log Base 2 Calculator
 log² (x)
+
+*************************************************************************************************************
+
+programa
+{
+
+	
+	funcao inicio()
+	{
+	inteiro cont, contA, contB
+	inteiro num, aux
+	inteiro vet[10]
+	
+//Preencher o vetor
+	para (cont = 0; cont<= 9; cont++){
+		escreva("Digite um Número: ")
+		leia(num)
+		vet[cont] = num
+	}
+//Ordenar vetor criado
+	para(contA = 0; contA <= 9; contA++){
+	para(contB = contA + 1; contB <= 9; contB++){
+		se(vet[contA] > vet[contB]){
+		aux = vet[contB]
+		vet[contB] = vet[contA]
+		vet[contA] = aux
+  }
+ }
+}
+//Verificar se vetor está ordenado (para debugging)
+	para (contA = 0; contA <= 9; contA++){
+		escreva(vet[contA] + " ")
+	}
+//Algoritmo para pesquisa binária
+	inteiro inicial = 0
+	inteiro final = 9
+	inteiro meio, busca
+	logico encontrado = falso
+
+	escreva("\nDigite um valor para pesquisa no vetor: ")
+	leia (busca)
+	enquanto ((inicial <= final) e (nao encontrado)){
+	 meio = (inicial + final) / 2
+	 se (vet[meio] == busca){
+	 	encontrado = verdadeiro
+	 }
+	 senao se (vet[meio] > busca){
+	 	final = meio - 1 }
+	 senao{ 
+	 	inicial = meio + 1
+	 }
+	 }
+	 se (encontrado == verdadeiro){
+	 	escreva("Valor encontrado no Vetor.\n")
+	 }
+	 senao {
+	 	escreva("Valor inexistente.\n")
+	 }
+	 }
+}
