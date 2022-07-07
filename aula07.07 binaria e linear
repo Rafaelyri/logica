@@ -41,7 +41,7 @@ programa
 		}
 		se(vetAlea[pos] == busca){
 			escreva("Número existente no array!\n")
-			escreva("Pesquisa Linear.")
+			
 		}
 		senao{
 			escreva("Número inexistente!!\n")
