@@ -10,7 +10,6 @@ programa
 //em vez de cronometrar manualmente.
 //Logo após, responda à seguinte pergunta: - "Qual dos algoritmos retornou um resultado mais rapidamente?"
 	
-	
 	inclua biblioteca Util --> u
 	inteiro alea, vetAlea[1000], cont
 	inteiro busca, pos, contA, contB, aux
@@ -19,14 +18,10 @@ programa
 	inteiro tempo_atual = 0
 	inteiro tempo_total = 0
 
-	
 	funcao inicio()
 	{
-		tempo_inicial = u.tempo_decorrido()
-
-		
 	//Armazenando números aleatorios no vetor
-		para (cont = 0; cont < 1000; cont++){
+	para (cont = 0; cont < 1000; cont++){
 		alea = u.sorteia(1, 2000)
 		vetAlea[cont] = alea
 		//escreva(alea+ " ")
@@ -35,75 +30,66 @@ programa
 		escreva("Digite um valor à ser pesquisado no vetor: ")
 		leia(busca)
 		pos = 0
-		
-		enquanto((pos < 999) e (vetAlea[pos] != busca)){
+
+		tempo_inicial = u.tempo_decorrido()
+	enquanto((pos < 999) e (vetAlea[pos] != busca)){
 			pos++
 		}
-		se(vetAlea[pos] == busca){
-			escreva("Número existente no array!\n")
+	se(vetAlea[pos] == busca){
+		escreva("Número existente no array!\n")
 			
 		}
-		senao{
-			escreva("Número inexistente!!\n")
+	senao{
+		escreva("Número inexistente!!\n")
+		}
+
+	tempo_atual = u.tempo_decorrido()
+		tempo_total = tempo_atual - tempo_inicial
+		escreva("Pesquisa Linear, Tempo Total: ", tempo_total, "\n")
+	//Ordenando o vetor criado
+	tempo_inicial = u.tempo_decorrido()
+	para(contA = 0; contA < 1000; contA++){
+	para(contB = contA + 1; contB < 1000; contB++){
+	se(vetAlea[contA] > vetAlea[contB]){
+		aux = vetAlea[contB]
+		vetAlea[contB] = vetAlea[contA]
+		vetAlea[contA] = aux
+		}
+		}
 		}
 		
-	//Ordenando o vetor criado
-		para(contA = 0; contA < 1000; contA++){
-			para(contB = contA + 1; contB < 1000; contB++){
-				se(vetAlea[contA] > vetAlea[contB]){
-					aux = vetAlea[contB]
-					vetAlea[contB] = vetAlea[contA]
-					vetAlea[contA] = aux
-				}
-			}
-		}
-		faca
-		{
-			tempo_atual = u.tempo_decorrido()
-			
-			tempo_total = tempo_atual - tempo_inicial
-	
-		}
-		enquanto (tempo_total < 10000) // 	Finaliza o programa após 10 segundos
-		escreva("Pesquisa Linear, Tempo Total: ", tempo_total, "\n")
+		tempo_atual = u.tempo_decorrido()
+		tempo_total = tempo_atual - tempo_inicial
+		escreva("A ordenação demorou, Tempo Total: ", tempo_total, "\n")
 	//Verificando se o vetor está ordenado
 		//para(contA = 0; contA < 1000; contA++){
 			//escreva(vetAlea[contA]+ " ")
 		//}
 	//Pesquisa binaria no vetor
-		inteiro inicial = 0
-		inteiro final = 1000
-		inteiro meio
-		logico encontrado = falso
+	inteiro inicial = 0
+	inteiro final = 1000
+	inteiro meio
+	logico encontrado = falso
 
-		
-		enquanto((inicial <= final) e (nao encontrado)){
+	tempo_inicial = u.tempo_decorrido()
+	enquanto((inicial <= final) e (nao encontrado)){
 			meio = (inicial + final) / 2
-			se(vetAlea[meio] == busca){
-				encontrado = verdadeiro
-			}
-			senao se(vetAlea[meio] > busca){
-				final = meio - 1
-			}
-			senao{
-				inicial = meio + 1
-			}
-		}
-		se(encontrado == verdadeiro){
-			
-		}
-		senao{
-			
-		}
-		faca
-		{
-			tempo_atual = u.tempo_decorrido()
-			
-			tempo_total = tempo_atual - tempo_inicial
-	
-		}
-		enquanto (tempo_total < 10000) // 	Finaliza o programa após 10 segundos
-		escreva("Pesquisa Binaria, Tempo Total: ", tempo_total, "\n")
-		
+	se(vetAlea[meio] == busca){
+			encontrado = verdadeiro
 	}
+	senao se(vetAlea[meio] > busca){
+			final = meio - 1
+	}
+	senao{
+		  inicial = meio + 1
+	}
+	}
+	se(encontrado == verdadeiro){
+			
+}
+	tempo_atual = u.tempo_decorrido()
+	tempo_total = tempo_atual - tempo_inicial
+	escreva("Pesquisa Binaria, Tempo Total: ", tempo_total, "\n")
+		
+}
 }
